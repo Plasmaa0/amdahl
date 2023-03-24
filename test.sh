@@ -8,7 +8,7 @@ echo "$num_threads" number of threads
 all_times=()
 for i in $(seq "$n_tests"); do
   echo -ne " $i" of "$n_tests" tests "\r"
-  seconds=$(./cmake-build-debug/osi2 "$array_len" 0 "$num_threads")
+  seconds=$(./cmake-build-debug/merge-sort "$array_len" 0 "$num_threads")
   all_times+=("$seconds")
 done
 echo Tests done. Calculating average time...
