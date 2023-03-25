@@ -84,11 +84,11 @@ axs[1, 1].set_title(r'$\frac{s_p}{p}$ - эффективность')
 axs[1, 1].set_xlabel('$p$')
 axs[1, 1].set_ylabel(r'$\frac{s_p}{p}$')
 
-plt.show()
-exit(0)
-import time
 fig.set_size_inches(18.5, 10.5)
+plt.tight_layout()
+import time
 filename=f"{array_len}_{n_tests}_{time.strftime('%Y%m%d-%H%M%S')}.png"
 plt.savefig(filename, dpi=300)
+# plt.show()
 import os
 os.system(f'xdg-open {filename}')
